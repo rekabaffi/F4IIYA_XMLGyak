@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<F4IIYA_kurzusfelvetel tanev="2023/24 I.félév" egyetem="ME">
+    <hallgato id="F4IIYA_ME">
+        <hnev>Baffi Réka</hnev>
+        <szulev>2002-07-10</szulev>
+        <szak>Gazdaságinformatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAL332-B" jovahagyas="igen">
+            <kurzusnev>Adatkezelés XML környezetben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII.előadó</hely>
+            <idopont>Kedd 12:00-14:00</idopont>
+            <oktato>Bednarik László</oktato>
+        </kurzus>
+        <kurzus id="GTÜPZ121B-B">
+            <kurzusnev>Pénzügytan</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXVII A3 A5 között</hely>
+            <idopont>Hétfő 10:00-12:00</idopont>
+            <oktato>Dr.Bozsik Sándor</oktato>
+        </kurzus>
+        <kurzus id="GTÜSZ601B-B">
+            <kurzusnev>Számvitel</kurzusnev>
+            <kredit>5</kredit>
+            <hely>VIII A1 115</hely>
+            <idopont>Kedd 08:00-10:00</idopont>
+            <oktato>Dr.Pál Tibor</oktato>
+        </kurzus>
+        <kurzus id="GTVIM6001B-B">
+            <kurzusnev>Termelésmenedzsment</kurzusnev>
+            <kredit>2</kredit>
+            <hely>XXXVII A3 A5 között</hely>
+            <idopont>Szerda 16:00-18:00</idopont>
+            <oktato>Dr.Berényi László</oktato>
+        </kurzus>
+        <kurzus id="GEIAL315-B">
+            <kurzusnev>Vállalati információs rendszerek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>In/101</hely>
+            <idopont>Szerda 14:00-16:00</idopont>
+            <oktato>Dr.Sasvári Péter</oktato>
+        </kurzus>
+    </kurzusok>
+
+
+
+</F4IIYA_kurzusfelvetel>
