@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE F4IIYA_kurzusfelvetel >
+
+<F4IIYA_kurzusfelvetel tanev="2023/2024" egyetem="ME">
+
+    <hallgato id="F4IIYA.ME">
+        <nev>Baffi Réka</nev>
+        <szul>2002.07.10.</szul>
+        <szak ev="5">Gazdaságinformatikus Bsc</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAK130-B">
+            <kurzusnev>Mestreséges intelligencia</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII A1 magasfsz</hely>
+            <idopont>Kedd 10:00-12:00</idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL331-B">
+            <kurzusnev>WEB technológiák</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXX A1 III. em. 305</hely>
+            <idopont>Hétfő 14:00-16:00</idopont>
+            <oktato>Agárdi Anita</oktato>
+        </kurzus>
+    </kurzusok>
+
+</F4IIYA_kurzusfelvetel>
