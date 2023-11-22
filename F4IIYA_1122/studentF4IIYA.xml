@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class>
+    <student id="4512">
+        <keresztnév>Réka</keresztnév>
+        <vezetéknév>Baffi</vezetéknév>
+        <becenév>Rékuci</becenév>
+        <kor>21</kor>
+    </student>
+
+     <student id="7894">
+        <keresztnév>Bence</keresztnév>
+        <vezetéknév>Kiss</vezetéknév>
+        <becenév>Bencus</becenév>
+        <kor>18</kor>
+    </student>
+
+     <student id="4212">
+        <keresztnév>Éva</keresztnév>
+        <vezetéknév>Papp</vezetéknév>
+        <becenév>Vica</becenév>
+        <kor>25</kor>
+    </student>
+    
+</class>
