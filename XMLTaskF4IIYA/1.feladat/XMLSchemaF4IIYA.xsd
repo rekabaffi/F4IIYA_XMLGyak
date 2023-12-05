@@ -1,0 +1,228 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!--Egyszerű elemek-->
+
+    <xs:element name="cim" type="xs:string" />
+    <xs:element name="hossz" type="hosszTipus" />
+    <xs:element name="mufaj" type="mufajTipus" />
+    <xs:element name="eloado" type="xs:string" />
+
+    <xs:element name="nev" type="xs:string" />
+    <xs:element name="terulet" type="xs:string" />
+    <xs:element name="befogadokepesseg" type="xs:int" />
+    <xs:element name="iranyitoszam" type="xs:int" />
+    <xs:element name="varos" type="xs:string" />
+    <xs:element name="utca_hazszam" type="xs:string" />
+
+    <xs:element name="t_mufaj" type="xs:string" />
+
+    <xs:element name="tagok_szama" type="xs:int" />
+    <xs:element name="egyesulet" type="xs:string" />
+    <xs:element name="korcsoport" type="xs:string" />
+
+    <xs:element name="eletkor" type="xs:int" />
+    <xs:element name="szuletesi_datum" type="idoTipus" />
+
+    <xs:element name="pontszam" type="xs:int" />
+
+    <!--Saját típusok-->
+
+    <xs:simpleType name="mufajTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pop" />
+            <xs:enumeration value="Rock" />
+            <xs:enumeration value="Elektronikus" />
+            <xs:enumeration value="Romantikus" />
+            <xs:enumeration value="Disco" />
+            <xs:enumeration value="Jazz" />
+            <xs:enumeration value="Country" />
+            <xs:enumeration value="Hip-hop" />
+            <xs:enumeration value="Rap" />
+            <xs:enumeration value="Klasszikus" />
+            <xs:enumeration value="Folk" />
+            <xs:enumeration value="R and B " />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="hosszTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]:[0-9][0-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([12]\d{3}.(0[1-9]|1[0-2]).(0[1-9]|[12]\d|3[01]))" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Felépítés-->
+
+    <xs:element name="F4IIYA_Tancverseny">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="zene" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="cim" />
+                            <xs:element ref="hossz" />
+                            <xs:element ref="mufaj" />
+                            <xs:element ref="eloado" />
+                        </xs:sequence>
+                        <xs:attribute name="zene_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="versenyhelyszin" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nev" />
+                            <xs:element ref="terulet" />
+                            <xs:element ref="befogadokepesseg" />
+                            <xs:element name="cim" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="iranyitoszam" />
+                                        <xs:element ref="varos" />
+                                        <xs:element ref="utca_hazszam" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element> 
+                        </xs:sequence>
+                        <xs:attribute name="verseny_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tanc" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="t_mufaj"/>
+                            <xs:element ref="nev" />
+                            <xs:element ref="hossz" />
+                        </xs:sequence>
+                        <xs:attribute name="tanc_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="csoport" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tagok_szama" />
+                            <xs:element ref="nev" />
+                            <xs:element ref="egyesulet" />
+                            <xs:element ref="korcsoport" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="csoport_id" type="xs:int" />
+                        <xs:attribute name="produkcio" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="versenyzo" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="eletkor" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element ref="nev" />
+                            <xs:element ref="szuletesi_datum" />
+                            <xs:element name="lakcim" minOccurs="1" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="iranyitoszam" />
+                                        <xs:element ref="varos" />
+                                        <xs:element ref="utca_hazszam" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element> 
+                        </xs:sequence>
+                        <xs:attribute name="versenyzo_id" type="xs:int" />
+                        <xs:attribute name="tag" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tanc_helye" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="pontszam" />
+                        </xs:sequence>
+                        <xs:attribute name="th_id" type="xs:int" />
+                        <xs:attribute name="tanc_id" type="xs:int" />
+                        <xs:attribute name="verseny_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="lejatszott_zene" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="tanc_id" type="xs:int" />
+                        <xs:attribute name="zene_id" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!--Kulcsok-->
+
+        <xs:key name="zene_kulcs">
+            <xs:selector xpath="zene" />
+            <xs:field xpath="@zene_id" />
+        </xs:key>
+
+        <xs:key name="helyszin_kulcs">
+            <xs:selector xpath="versenyhelyszin" />
+            <xs:field xpath="@verseny_id" />
+        </xs:key>
+
+        <xs:key name="tanc_kulcs">
+            <xs:selector xpath="tanc" />
+            <xs:field xpath="@tanc_id" />
+        </xs:key>
+
+        <xs:key name="csoport_kulcs">
+            <xs:selector xpath="csoport" />
+            <xs:field xpath="@csoport_id" />
+        </xs:key>
+
+        <xs:key name="versenyzo_kulcs">
+            <xs:selector xpath="versenyzo" />
+            <xs:field xpath="@versenyzo_id" />
+        </xs:key>
+
+        <xs:key name="tanc_helye_kulcs">
+            <xs:selector xpath="tanc_helye" />
+            <xs:field xpath="@th_id" />
+        </xs:key>
+
+        <!--Idegen kulcsok-->
+
+        <xs:keyref refer="tanc_kulcs" name="tanc_idegen_kulcs">
+            <xs:selector xpath="csoport" />
+            <xs:field xpath="@produkcio" />
+        </xs:keyref>
+
+        <xs:keyref refer="csoport_kulcs" name="csoport_idegen_kulcs">
+            <xs:selector xpath="versenyzo" />
+            <xs:field xpath="@tag" />
+        </xs:keyref>
+
+        <xs:keyref refer="tanc_kulcs" name="tanc_tanchelye_idegen_kulcs">
+            <xs:selector xpath="tanc_helye" />
+            <xs:field xpath="@tanc_id" />
+        </xs:keyref>
+
+        <xs:keyref refer="helyszin_kulcs" name="verseny_tanchelye_idegen_kulcs">
+            <xs:selector xpath="tanc_helye" />
+            <xs:field xpath="@verseny_id" />
+        </xs:keyref>
+
+        <xs:keyref refer="tanc_kulcs" name="tanc_lejatszottzene_idegen_kulcs">
+            <xs:selector xpath="lejatszott_zene" />
+            <xs:field xpath="@tanc_id" />
+        </xs:keyref>
+
+        <xs:keyref refer="zene_kulcs" name="zene_lejatszottzene_idegen_kulcs">
+            <xs:selector xpath="lejatszott_zene" />
+            <xs:field xpath="@zene_id" />
+        </xs:keyref>
+
+        <!--1:1-->
+
+        <xs:unique name="unique_tanc">
+            <xs:selector xpath="csoport" />
+            <xs:field xpath="@produkcio" />
+        </xs:unique>
+
+    </xs:element>
+
+</xs:schema>
