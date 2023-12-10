@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<F4IIYA_Tancverseny xmlns="XMLF4IIYA">
+    <!--Zenék-->
+    <zene zene_id="1">
+        <cim>Cim 1</cim>
+        <hossz>3:45</hossz>
+        <mufaj>Pop</mufaj>
+        <eloado>Kovács Anna</eloado>
+    </zene>
+    <zene zene_id="2">
+        <cim>Cim 2</cim>
+        <hossz>2:45</hossz>
+        <mufaj>Elektronikus</mufaj>
+        <eloado>Tiesto</eloado>
+    </zene>
+    <zene zene_id="3">
+        <cim>Cim 3</cim>
+        <hossz>3:29</hossz>
+        <mufaj>Folk</mufaj>
+        <eloado>Szabó István</eloado>
+    </zene>
+    <!--Versenyhelyszínek-->
+    <versenyhelyszin verseny_id="1">
+        <nev>Park Stadion</nev>
+        <terulet>800 nm^2</terulet>
+        <befogadokepesseg>5000</befogadokepesseg>
+        <cim>
+            <iranyitoszam>1024</iranyitoszam>
+            <varos>Budapest</varos>
+            <utca_hazszam>Kossuth utca 10</utca_hazszam>
+        </cim>
+    </versenyhelyszin>
+    <versenyhelyszin verseny_id="2">
+        <nev>Sportaréna</nev>
+        <terulet>1200 nm^2</terulet>
+        <befogadokepesseg>10000</befogadokepesseg>
+        <cim>
+            <iranyitoszam>1132</iranyitoszam>
+            <varos>Budapest</varos>
+            <utca_hazszam>Rákospatak utca 5</utca_hazszam>
+        </cim>
+    </versenyhelyszin>
+    <versenyhelyszin verseny_id="3">
+        <nev>Sportközpont</nev>
+        <terulet>600 nm^2</terulet>
+        <befogadokepesseg>3000</befogadokepesseg>
+        <cim>
+            <iranyitoszam>3521</iranyitoszam>
+            <varos>Debrecen</varos>
+            <utca_hazszam>Sport utca 8</utca_hazszam>
+        </cim>
+    </versenyhelyszin>
+    <!--Táncok-->
+    <tanc tanc_id="1">
+        <t_mufaj>Modern tánc</t_mufaj>
+        <nev>Fények játéka</nev>
+        <hossz>4:30</hossz>
+    </tanc>
+    <tanc tanc_id="2">
+        <t_mufaj>Latin tánc</t_mufaj>
+        <nev>Forró ritmusok</nev>
+        <hossz>3:15</hossz>
+    </tanc>
+    <tanc tanc_id="3">
+        <t_mufaj>Balett</t_mufaj>
+        <nev>Hamupipőke álom</nev>
+        <hossz>5:00</hossz>
+    </tanc>
+    <!--Csoportok-->
+    <csoport csoport_id="1" produkcio="1">
+        <tagok_szama>15</tagok_szama>
+        <nev>Arany Csillagok</nev>
+        <egyesulet>Táncművészeti Egyesület</egyesulet>
+        <korcsoport>25-30</korcsoport>
+    </csoport>
+    <csoport csoport_id="2" produkcio="2">
+        <tagok_szama>10</tagok_szama>
+        <nev>Latin Ritmusok</nev>
+        <egyesulet>Tánciskola</egyesulet>
+        <korcsoport>25-30</korcsoport>
+        <korcsoport>22-25</korcsoport>
+    </csoport>
+    <csoport csoport_id="3" produkcio="3">
+        <tagok_szama>14</tagok_szama>
+        <nev>Kis Angyalok</nev>
+        <egyesulet>Balett Stúdió</egyesulet>
+        <korcsoport>12-14</korcsoport>
+    </csoport>
+    <!--Versenyzők-->
+    <versenyzo tag="3" versenyzo_id="1">
+        <eletkor>14</eletkor>
+        <nev>Kovács Anna</nev>
+        <szuletesi_datum>2009-04-10</szuletesi_datum>
+        <lakcim>
+            <iranyitoszam>1024</iranyitoszam>
+            <varos>Budapest</varos>
+            <utca_hazszam>Kossuth utca 10</utca_hazszam>
+        </lakcim>
+    </versenyzo>
+    <versenyzo tag="2" versenyzo_id="2">
+        <nev>Szabó Bence</nev>
+        <szuletesi_datum>1992-08-22</szuletesi_datum>
+        <lakcim>
+            <iranyitoszam>1132</iranyitoszam>
+            <varos>Budapest</varos>
+            <utca_hazszam>Rákospatak utca 5</utca_hazszam>
+        </lakcim>
+    </versenyzo>
+    <versenyzo tag="1" versenyzo_id="3">
+        <eletkor>25</eletkor>
+        <nev>Nagy Ferenc</nev>
+        <szuletesi_datum>1998-04-10</szuletesi_datum>
+        <lakcim>
+            <iranyitoszam>4023</iranyitoszam>
+            <varos>Debrecen</varos>
+            <utca_hazszam>Sport tér 15</utca_hazszam>
+        </lakcim>
+    </versenyzo>
+    <!--A tánc helye több-több kapcsolat-->
+    <tanc_helye tanc_id="2" th_id="1" verseny_id="3">
+        <pontszam>78</pontszam>
+    </tanc_helye>
+    <tanc_helye tanc_id="1" th_id="2" verseny_id="1">
+        <pontszam>82</pontszam>
+    </tanc_helye>
+    <tanc_helye tanc_id="3" th_id="3" verseny_id="2">
+        <pontszam>76</pontszam>
+    </tanc_helye>
+    <!--Lejátszott zene több-több kapcsolat-->
+    <lejatszott_zene tanc_id="1" zene_id="1"/>
+    <lejatszott_zene tanc_id="2" zene_id="2"/>
+    <lejatszott_zene tanc_id="3" zene_id="3"/>
+</F4IIYA_Tancverseny>
