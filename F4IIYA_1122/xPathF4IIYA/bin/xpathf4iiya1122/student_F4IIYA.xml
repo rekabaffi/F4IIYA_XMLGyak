@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class>
+    <student id="5792">
+        <keresztnév>Andrea</keresztnév>
+        <vezetéknév>Kiss</vezetéknév>
+        <becenév>Andi</becenév>
+        <kor>19</kor>
+    </student>
+
+     <student id="9814">
+        <keresztnév>Olivér</keresztnév>
+        <vezetéknév>Kovács</vezetéknév>
+        <becenév>Oli</becenév>
+        <kor>21</kor>
+    </student>
+
+     <student id="6619">
+        <keresztnév>Virág</keresztnév>
+        <vezetéknév>Réti</vezetéknév>
+        <becenév>Vircsi</becenév>
+        <kor>17</kor>
+    </student>
+    
+</class>
